@@ -5,6 +5,7 @@ function add () {
 
     const li = document.createElement("li")
     li.innerText = tarefa 
+    
     ul.appendChild(li)
 
     input.value = ""
