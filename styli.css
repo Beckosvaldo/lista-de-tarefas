@@ -1,4 +1,55 @@
 body{
     background-color: rgb(77, 177, 202);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 15px black solid;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0%;
+    
+
+}
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+li {
+    font-weight: lighter;
+}
+main ul{
+    list-style: none;
+}
+footer{
+
+}
+div{
+    height: 40vh;
+    width: 30vw ;
+    background-color: antiquewhite;
+
+}
+input{
+padding: 1%;
+font-size: medium;
+}
+.add {
+    margin: 1%;
+    height: 7vh;
+    width: 10vw;
+    font-size: medium;
+    background-color: rgb(199, 196, 51);
+}
+button{
+    background-color: rgb(233, 8, 8);
+    border: none;
+    font-weight: bolder;
 }

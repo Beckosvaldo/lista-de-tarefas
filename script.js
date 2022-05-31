@@ -1,13 +1,38 @@
+
+let tarefas = []
+
+document.addEventListener("keypress", function(e){
+   if(e.key == "Enter"){
+       add()
+   }
+})
+
 function add () {
-    const ul = document.querySelector("ul")
     const input = document.querySelector("input")
-    const tarefa = input.value
+    if(input.value == ""){
+        alert("Sem tarefas!")
 
-    const li = document.createElement("li")
-    li.innerText = tarefa 
-    
-    ul.appendChild(li)
-
+    } else{
+    tarefas.push(input.value)
     input.value = ""
-    
-}
+    render()}
+ } 
+ function render (){
+      const ul = document.querySelector("ul")
+      ul.innerHTML = null
+
+      tarefas.forEach(function(tarefa)  {
+          const li = document.createElement("li")
+    li.innerText = tarefa 
+    ul.appendChild(li)    
+    const button = document.createElement("button")
+    button.innerHTML = "X"
+    button.addEventListener("click", function() {
+        const index = tarefas.indexOf(tarefa)
+        tarefas.splice(index, 1)
+        render()
+    })
+    li.appendChild(button)
+    })
+ }
+render()
